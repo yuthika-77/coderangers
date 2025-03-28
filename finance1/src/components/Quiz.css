@@ -1,0 +1,143 @@
+.quiz-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #222 !important;  /* Force the background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Arial, sans-serif;
+}
+
+.quiz-container {
+    flex: 1;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #222;
+    border: 4px solid #00ffcc;
+    box-shadow: 8px 8px 0 #00ffcc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Arial, sans-serif;
+    color: #00ffcc;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.option {
+    display: block;
+    background: black;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 80%;
+    transition: all 0.2s ease-in-out;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.option:hover {
+    background: #00ffcc;
+    color: black;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.result {
+    font-size: 16px;
+    color: #00ffcc;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in;
+    font-weight: 500;
+}
+
+.main-nav {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background-color: #00ffcc;
+    color: #222;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 10px;
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .question {
+        font-size: 14px;
+    }
+
+    .option {
+        font-size: 13px;
+        padding: 8px;
+        width: 90%;
+    }
+
+    .main-nav {
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem;
+    }
+} 
